@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import Post from './pages/Post';
 import Profile from './pages/Profile';
 import AdminLayout from './Layouts/AdminLayout';
+import UserLayout from './Layouts/UserLayout';
 import Dashboard from './pages/Admin/Dashboard';
 import Allpost from './pages/Admin/Allpost';
 import Addpost from './pages/Admin/Addpost';
@@ -19,15 +20,7 @@ import AuthCheck from './components/AuthCheck';
 import './index.css';
 
 // Layout component for user routes
-const UserLayout = () => (
-  <>
-    <Navbar />
-    <main className="flex-grow-1">
-      <Outlet />
-    </main>
-    <Footer />
-  </>
-);
+
 
 // Layout component for post page without navbar and footer
 const PostLayout = () => (

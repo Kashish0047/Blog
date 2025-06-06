@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../store/slices/authSlice';
 import { FaUser, FaSignOutAlt, FaTachometerAlt } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { BaseURL } from '../services/Endpoint';
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -47,7 +48,7 @@ function Navbar() {
               >
                 <div className="position-relative">
                   <img
-                    src={user.profile ? `http://localhost:8000/images/${user.profile}` : 'https://via.placeholder.com/32'}
+                    src={user.profile ? `${BaseURL}/images/${user.profile}` : 'https://via.placeholder.com/32'}
                     alt="Profile"
                     className="rounded-circle border border-warning"
                     style={{ 
